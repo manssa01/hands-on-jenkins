@@ -9,7 +9,7 @@ pipeline {
 
     stage('Test') {
       parallel {
-        stage('Test') {
+        stage('Test Firefox') {
           steps {
             sh 'echo \'Testing Firefox\''
           }
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test Chrome') {
           steps {
-            sh 'echo \'Testing chrome\''
+            sh 'echo \'Testing chrome\'; exit 1'
           }
         }
 
